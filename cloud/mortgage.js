@@ -28,6 +28,7 @@ var mortgage = {
 
 		//Feedhenry Web Call
 		$fh.web(opt, function(err, res) {
+      console.log(opt);
 			var xml2js = require("xml2js");
 			 (new xml2js.Parser()).parseString(res.body, function(err, jsres) {
 			 	var mortgageRes=jsres["soap:Body"].GetMortgagePaymentResponse.GetMortgagePaymentResult;
