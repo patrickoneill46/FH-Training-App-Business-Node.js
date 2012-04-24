@@ -32,7 +32,8 @@ var mortgage = {
 			var xml2js = require("xml2js");
 			 (new xml2js.Parser()).parseString(res.body, function(err, jsres) {
 			 	var mortgageRes=jsres["soap:Body"].GetMortgagePaymentResponse.GetMortgagePaymentResult;
-				callback(err, mortgageRes);
+				console.log(mortgageRes);
+        callback(err, mortgageRes);
 			});
 			return;
 		});
